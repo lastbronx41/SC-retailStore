@@ -155,7 +155,7 @@ nav svg {
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: translateY(20px);
+  transform: translateY(18px);
 }
 .total-amount {
   color: var(--clr-white);
@@ -178,7 +178,7 @@ Cart
   max-width: var(--fixed-width);
 
 }
-.cart h2 {
+.cart h2,.cart h3 {
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 3rem;
