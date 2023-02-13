@@ -138,6 +138,7 @@ nav h3 {
 .nav-container {
   display: block;
   position: relative;
+  max-width: 4rem
 }
 nav svg {
   width: 40px;
@@ -154,17 +155,20 @@ nav svg {
   display: flex;
   align-items: center;
   justify-content: center;
+  transform: translateY(20px);
 }
 .total-amount {
   color: var(--clr-white);
   margin-bottom: 0;
   font-size: 1.25rem;
+
 }
 /*
 =============== 
 Cart
 ===============
 */
+
 .cart {
   min-height: calc(100vh - 120px);
   width: 90vw;
@@ -172,6 +176,7 @@ Cart
   margin-top: 40px;
   padding: 2.5rem 0;
   max-width: var(--fixed-width);
+
 }
 .cart h2 {
   text-transform: uppercase;
