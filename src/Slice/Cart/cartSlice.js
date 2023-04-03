@@ -29,22 +29,23 @@ const cartSlice = createSlice({
 			const item = state.cartItems.find(
 				(element) => element.id === action.payload
 			);
-			item.amount = Math.max(1, item.amount - 1);
+			item.amount = Math.max(0, item.amount - 1);
 		},
 		calcTotals: (state) => {
 			let amount = 0;
 			let total = 0;
-			state.cartItems.forEach((item)=>{
-				amount += item.amount
-				total += item.amount * item.price
+			state.cartItems.forEach((item) => {
+				amount += item.amount;
+				total += item.amount * item.price;
 			});
 			state.amount = amount;
-			state.total = total;
-		}
+			state.total = total.toFixed(2);
+		},
 	},
 });
 
 console.log(cartSlice);
 
 export default cartSlice.reducer;
-export const { clearCart, removeItem, increase, decrease, calcTotals } = cartSlice.actions;
+export const { clearCart, removeItem, increase, decrease, calcTotals } =
+	cartSlice.actions;
